@@ -13,3 +13,10 @@ Quotes:
 
 >High-level modules should not depend on low-level modules. Both should depend on abstractions.
 >Abstractions should not depend upon details. Details should depend upon abstractions.
+
+>ISP usually applies to other OO languages such as c# and c++, 
+which use 'Interfaces' and 'abstractions. 
+This doesn't apply directly to ruby. So we have tried to demonstrate 
+these principles as best we can, using some elements of ruby, like Modules, and Classes.
+
+>
