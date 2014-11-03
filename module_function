@@ -1,0 +1,49 @@
+module ICan
+  def haz(value)
+    puts "I can haz #{value}"
+  end
+  module_function :haz
+end
+
+module Ohai
+  module_function
+
+  def bye
+    puts "kthxbai"
+  end
+
+  def hello
+    puts "ohai"
+  end
+end
+
+ICan.haz "pizza"
+# => I can haz pizza
+Ohai.hello
+# => ohai
+Ohai.bye
+# => kthxbai
+
+class Cat
+  include ICan
+  include Ohai
+
+  def have_a_nice_day
+    hello
+    mouse
+    bye
+  end
+
+  def mouse
+    haz "mouse"
+  end
+end
+
+Cat.new.tap do |cat|
+  cat.have_a_nice_day
+  # => ohai
+  # => I can haz mouse
+  # => kthxbai
+  cat.haz "mouse"
+  # => `block in <main>': private method `haz' called for #<Cat:0x007f8a0f3075f0> (NoMethodError)
+end
