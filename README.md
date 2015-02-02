@@ -1,5 +1,7 @@
 #SOLID Principles Demonstration
 
+[![Code Climate](https://codeclimate.com/github/nickbdyer/solid-isp/badges/gpa.svg)](https://codeclimate.com/github/nickbdyer/solid-isp)
+
 Week 2 Day 1 at Makers Academy
 
 ###Interface Segregation Principle
